@@ -1,4 +1,3 @@
-#potencia, raiz, porcentaje, modulo, pomedio
 while True:
     print("Bienvenido a la calculadora científica")
     print("Seleccione la operación que desea realizar:")
