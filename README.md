@@ -11,19 +11,19 @@ Este scrit permite realizar operaciones matemáticas básicas y avanzadas median
 #####  1. Dentro de un ciclo le damos las opciones que el usuario puede realizar
 
 ```
-    while True:   
-        print("Bienvenido a la calculadora científica")
-        print("Seleccione la operación que desea realizar:")
-        print("1. Potencia")
-        print("2. Raíz cuadrada del primer número")
-        print("3. Porcentaje del primer número con respecto al segundo")
-        print("4. Módulo (resto de la división)")
-        print("5. Promedio de los dos números")
-        print("6. Suma")
-        print("7. Resta")
-        print("8. Multiplicación")
-        print("9. División")
-        print("10. Desea continuar? (s/n)")
+while True:   
+    print("Bienvenido a la calculadora científica")
+    print("Seleccione la operación que desea realizar:")
+    print("1. Potencia")
+    print("2. Raíz cuadrada del primer número")
+    print("3. Porcentaje del primer número con respecto al segundo")
+    print("4. Módulo (resto de la división)")
+    print("5. Promedio de los dos números")
+    print("6. Suma")
+    print("7. Resta")
+    print("8. Multiplicación")
+    print("9. División")
+    print("10. Desea continuar? (s/n)")
 ```
 
 --------------------------------------------------------------------------
