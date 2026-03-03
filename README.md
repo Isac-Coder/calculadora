@@ -5,7 +5,7 @@
 
 
 
-# **Proyecto: Calculadora Científica [<img src="image.png" width="30"/>](https://www.desmos.com/scientific?lang=es) Básica en Python**
+# **Proyecto: Calculadora Científica Básica en Python [<img src="image.png" width="30"/>](https://www.desmos.com/scientific?lang=es)**
 
 
 Este scrit permite realizar operaciones matemáticas básicas y avanzadas mediante la selección de un menú interactivo.
