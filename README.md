@@ -10,7 +10,7 @@ Este scrit permite realizar operaciones matemáticas básicas y avanzadas median
 
 #####  1. Dentro de un ciclo le damos las opciones que el usuario puede realizar
 
-
+```
     while True:   
         print("Bienvenido a la calculadora científica")
         print("Seleccione la operación que desea realizar:")
@@ -24,11 +24,13 @@ Este scrit permite realizar operaciones matemáticas básicas y avanzadas median
         print("8. Multiplicación")
         print("9. División")
         print("10. Desea continuar? (s/n)")
+```
 
 --------------------------------------------------------------------------
 
 ##### 2. agregamos el codigo de las operaciones que se pueden realizar en la calculadora
 
+ ```
     opcion = int(input("Ingrese el número de la operación que desea realizar: "))
 
         if opcion == 1:
@@ -96,6 +98,7 @@ Este scrit permite realizar operaciones matemáticas básicas y avanzadas median
 
         else:
             print("Opción no válida. Por favor, seleccione una opción del 1 al 9.")
+```
 
 ------------------------
 
