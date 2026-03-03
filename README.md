@@ -1,4 +1,7 @@
-# **Proyecto: Calculadora Científica Básica en Python**
+<!--https://github.com/JavierArizaRiwi/MARKDOWN/blob/main/markdown_syntax_guide.md-->
+
+
+# **Proyecto: [Calculadora Científica](https://www.desmos.com/scientific?lang=es) Básica en Python**
 
 Este scrit permite realizar operaciones matemáticas básicas y avanzadas mediante la selección de un menú interactivo.
 
