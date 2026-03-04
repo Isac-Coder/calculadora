@@ -1,7 +1,6 @@
-vscode_lsp_terminal_prompt_tracker= {}
+from colores import *
 from carga import cargar
 from LimpiarP import LP
-historial = []
 
 
 while True:
