@@ -1,0 +1,4 @@
+ROJO = "\033[31m"
+VERDE = "\033[32m"
+RESET = "\033[0m"
+AMARILLO = "\033[33m"

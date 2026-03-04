@@ -1,69 +1,168 @@
+from colores import *
+from carga import cargar
+historial = []
+
+
 while True:
-    print("Bienvenido a la calculadora científica")
-    print("Seleccione la operación que desea realizar:")
-    print("1. Potencia")
-    print("2. Raíz cuadrada del primer número")
-    print("3. Porcentaje del primer número con respecto al segundo")
-    print("4. Módulo (resto de la división)")
-    print("5. Promedio de los dos números")
-    print("6. Suma")
-    print("7. Resta")
-    print("8. Multiplicación")
-    print("9. División")
-    print("10. Desea continuar? (s/n)")
+    print(f"{VERDE}Bienvenido a la calculadora científica")
+    print(f"Estas son las operaciones disponibles:")
+    print(f"1. Potencia del primer número elevado al segundo número")
+    print(f"2. Raíz cuadrada")
+    print(f"3. Porcentaje del segundo número con respecto al primer número")
+    print(f"4. Módulo (resto de la división) del primer número entre el segundo número")
+    print(f"5. Promedio de los dos números")
+    print(f"6. Suma")
+    print(f"7. Resta")
+    print(f"8. Multiplicación")
+    print(f"9. División")
+    print(f"{VERDE}10. Ver historial de operaciones")
+    print(f"{ROJO}11. Salir{VERDE}\n")
 
     opcion = int(input("Ingrese el número de la operación que desea realizar: "))
+    
     if opcion == 1:
         num1 = float(input("Ingrese el primer número: "))
         num2 = float(input("Ingrese el segundo número: "))
         resultado = num1 ** num2
-        print(f"{num1} elevado a la {num2} es igual a {resultado}")
+        cargar()
+        print("\n")
+        if resultado.is_integer():
+            resultado = int(resultado)
+            print(f"{VERDE}{num1} elevado a la {num2} es igual a {resultado}\n")
+        else:
+            resultado = round(resultado, 2)
+            print(f"{VERDE}{num1} elevado a la {num2} es igual a {resultado}\n")
+        historial.append(f"{num1} elevado a la {num2} = {resultado}")
+        
     elif opcion == 2:
         num1 = float(input("Ingrese el número: "))
         resultado = num1 ** 0.5
-        print(f"La raíz cuadrada de {num1} es igual a {resultado}")
+        cargar()
+        print("\n")
+        if resultado.is_integer():
+            resultado = int(resultado)
+            print(f"{VERDE}La raíz cuadrada de {num1} es igual a {resultado}\n")
+        else:
+            resultado = round(resultado, 2)
+            print(f"{VERDE}La raíz cuadrada de {num1} es igual a {resultado}\n")
+        historial.append(f"Raíz cuadrada de {num1} = {resultado}")
+        
     elif opcion == 3:
         num1 = float(input("Ingrese el primer número: "))
         num2 = float(input("Ingrese el segundo número: "))
         resultado = (num1 / num2) * 100
-        print(f"{num1} es el {resultado}% de {num2}")
+        cargar()
+        print("\n")
+        if resultado.is_integer():
+            resultado = int(resultado)
+            print(f"{VERDE}{num1} es el {resultado}% de {num2}\n")
+        else:
+            resultado = round(resultado, 2)
+            print(f"{VERDE}{num1} es el {resultado}% de {num2}\n")
+        historial.append(f"{num1} es el {resultado}% de {num2}")
+        
     elif opcion == 4:
         num1 = float(input("Ingrese el primer número: "))
         num2 = float(input("Ingrese el segundo número: "))
         resultado = num1 % num2
-        print(f"El módulo de {num1} y {num2} es igual a {resultado}")
+        cargar()
+        print("\n")
+        if resultado.is_integer():
+            resultado = int(resultado)
+            print(f"{VERDE}El módulo de {num1} y {num2} es igual a {resultado}\n")
+        else:
+            resultado = round(resultado, 2)
+            print(f"{VERDE}El módulo de {num1} y {num2} es igual a {resultado}\n")
+        historial.append(f"Módulo de {num1} y {num2} = {resultado}")
+        
     elif opcion == 5:
         num1 = float(input("Ingrese el primer número: "))
         num2 = float(input("Ingrese el segundo número: "))
         resultado = (num1 + num2) / 2
-        print(f"El promedio de {num1} y {num2} es igual a {resultado}")
+        cargar()
+        print("\n")
+        if resultado.is_integer():
+            resultado = int(resultado)
+            print(f"{VERDE}El promedio de {num1} y {num2} es igual a {resultado}\n")
+        else:
+            resultado = round(resultado, 2)
+            print(f"{VERDE}El promedio de {num1} y {num2} es igual a {resultado}\n")
+        historial.append(f"Promedio de {num1} y {num2} = {resultado}")
+        
     elif opcion == 6:
         num1 = float(input("Ingrese el primer número: "))
         num2 = float(input("Ingrese el segundo número: "))
         resultado = num1 + num2
-        print(f"La suma de {num1} y {num2} es igual a {resultado}")
+        cargar()
+        print("\n")
+        if resultado.is_integer():
+            resultado = int(resultado)
+            print(f"{VERDE}La suma de {num1} y {num2} es igual a {resultado}\n")
+        else:
+            resultado = round(resultado, 2)
+            print(f"{VERDE}La suma de {num1} y {num2} es igual a {resultado}\n")
+        historial.append(f"Suma de {num1} y {num2} = {resultado}")
+        
     elif opcion == 7:
         num1 = float(input("Ingrese el primer número: "))
         num2 = float(input("Ingrese el segundo número: "))
         resultado = num1 - num2
-        print(f"La resta de {num1} y {num2} es igual a {resultado}")
+        cargar()
+        print("\n")
+        if resultado.is_integer():
+            resultado = int(resultado)
+            print(f"{VERDE}La resta de {num1} y {num2} es igual a {resultado}\n")
+        else:
+            resultado = round(resultado, 2)
+            print(f"{VERDE}La resta de {num1} y {num2} es igual a {resultado}\n")
+        historial.append(f"Resta de {num1} y {num2} = {resultado}")
+        
     elif opcion == 8:
         num1 = float(input("Ingrese el primer número: "))
         num2 = float(input("Ingrese el segundo número: "))
         resultado = num1 * num2
-        print(f"La multiplicación de {num1} y {num2} es igual a {resultado}")
+        cargar()
+        print("\n")
+        if resultado.is_integer():
+            resultado = int(resultado)
+            print(f"{VERDE}La multiplicación de {num1} y {num2} es igual a {resultado}\n")
+        else:
+            resultado = round(resultado, 2)
+            print(f"{VERDE}La multiplicación de {num1} y {num2} es igual a {resultado}\n")
+        historial.append(f"Multiplicación de {num1} y {num2} = {resultado}")
+        
     elif opcion == 9:
         num1 = float(input("Ingrese el primer número: "))
         num2 = float(input("Ingrese el segundo número: "))
         if num2 != 0:
             resultado = num1 / num2
-            print(f"La división de {num1} entre {num2} es igual a {resultado}")
+            cargar()
+            print("\n")
+            if resultado.is_integer():
+                resultado = int(resultado)
+                print(f"{VERDE}La división de {num1} entre {num2} es igual a {resultado}\n")
+            else:
+                resultado = round(resultado, 2)
+                print(f"{VERDE}La división de {num1} entre {num2} es igual a {resultado}\n")
+            historial.append(f"División de {num1} entre {num2} = {resultado}")
         else:
-            print("Error: No se puede dividir por cero.")
-    elif opcion == 10:
-        continuar = input("¿Desea realizar otra operación? (s/n): ")
+            print(f"{ROJO}Error: No se puede dividir por cero.{ROJO}\n")
+            
+    elif opcion == 11:
+        continuar = input(f"{ROJO}¿Desea realizar otra operación? (s/n): {VERDE}")
         if continuar.lower() != 's':
-            print("Gracias por usar la calculadora científica. ¡Hasta luego!")
+            print(f"{VERDE}Gracias por usar la calculadora científica. ¡Hasta luego!")
             break
+    elif opcion == 10:
+        if not historial:
+            print(f"{ROJO}No hay operaciones en el historial.{RESET}\n")
+        else:
+            cargar()
+            print("\n")
+            print(f"{VERDE} ============== HISTORIAL ==============")
+            for i, operacion in enumerate(historial, 1):
+                print(f"| {i}. {operacion}")
+            print(" =======================================\n")
+        continue
     else:
-        print("Opción no válida. Por favor, seleccione una opción del 1 al 9.")
+        print("Opción no válida. Por favor, seleccione una opción del 1 al 11.\n")
