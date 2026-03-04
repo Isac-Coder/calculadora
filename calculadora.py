@@ -1,6 +1,7 @@
 from colores import *
 from carga import cargar
 from LimpiarP import LP
+historial = []
 
 
 while True:
