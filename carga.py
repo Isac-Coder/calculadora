@@ -1,8 +1,9 @@
 import time
+import random
 from colores import *
 
 def cargar():
     print(f"{VERDE}Calculando", end="")
-    for _ in range(4):
-        time.sleep(1)
+    for _ in range(3):
+        time.sleep(random.uniform(0.5, 1.5))
         print(".", end="", flush=True)
