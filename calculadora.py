@@ -1,5 +1,6 @@
 from colores import *
 from carga import cargar
+from LimpiarP import LP
 historial = []
 
 
@@ -21,6 +22,7 @@ while True:
     opcion = int(input("Ingrese el número de la operación que desea realizar: "))
     
     if opcion == 1:
+        LP()
         num1 = float(input("Ingrese el primer número: "))
         num2 = float(input("Ingrese el segundo número: "))
         resultado = num1 ** num2
@@ -35,6 +37,7 @@ while True:
         historial.append(f"{num1} elevado a la {num2} = {resultado}")
         
     elif opcion == 2:
+        LP()
         num1 = float(input("Ingrese el número: "))
         resultado = num1 ** 0.5
         cargar()
@@ -48,6 +51,7 @@ while True:
         historial.append(f"Raíz cuadrada de {num1} = {resultado}")
         
     elif opcion == 3:
+        LP()
         num1 = float(input("Ingrese el primer número: "))
         num2 = float(input("Ingrese el segundo número: "))
         resultado = (num1 / num2) * 100
@@ -62,6 +66,7 @@ while True:
         historial.append(f"{num1} es el {resultado}% de {num2}")
         
     elif opcion == 4:
+        LP()
         num1 = float(input("Ingrese el primer número: "))
         num2 = float(input("Ingrese el segundo número: "))
         resultado = num1 % num2
@@ -76,6 +81,7 @@ while True:
         historial.append(f"Módulo de {num1} y {num2} = {resultado}")
         
     elif opcion == 5:
+        LP()
         num1 = float(input("Ingrese el primer número: "))
         num2 = float(input("Ingrese el segundo número: "))
         resultado = (num1 + num2) / 2
@@ -90,6 +96,7 @@ while True:
         historial.append(f"Promedio de {num1} y {num2} = {resultado}")
         
     elif opcion == 6:
+        LP()
         num1 = float(input("Ingrese el primer número: "))
         num2 = float(input("Ingrese el segundo número: "))
         resultado = num1 + num2
@@ -104,6 +111,7 @@ while True:
         historial.append(f"Suma de {num1} y {num2} = {resultado}")
         
     elif opcion == 7:
+        LP()
         num1 = float(input("Ingrese el primer número: "))
         num2 = float(input("Ingrese el segundo número: "))
         resultado = num1 - num2
@@ -118,6 +126,7 @@ while True:
         historial.append(f"Resta de {num1} y {num2} = {resultado}")
         
     elif opcion == 8:
+        LP()
         num1 = float(input("Ingrese el primer número: "))
         num2 = float(input("Ingrese el segundo número: "))
         resultado = num1 * num2
@@ -132,6 +141,7 @@ while True:
         historial.append(f"Multiplicación de {num1} y {num2} = {resultado}")
         
     elif opcion == 9:
+        LP()
         num1 = float(input("Ingrese el primer número: "))
         num2 = float(input("Ingrese el segundo número: "))
         if num2 != 0:
@@ -159,7 +169,11 @@ while True:
         else:
             cargar()
             print("\n")
-            print(f"{VERDE} ============== HISTORIAL ==============")
+            LP()
+            print(f"{AMARILLO}┌───────────┐")
+            print("│ HISTORIAL │")
+            print("└───────────┘\n")
+            print(f" =======================================")
             for i, operacion in enumerate(historial, 1):
                 print(f"| {i}. {operacion}")
             print(" =======================================\n")
