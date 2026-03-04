@@ -1,4 +1,4 @@
-from colores import *
+vscode_lsp_terminal_prompt_tracker= {}
 from carga import cargar
 from LimpiarP import LP
 historial = []
